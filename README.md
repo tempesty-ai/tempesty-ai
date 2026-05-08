@@ -2,6 +2,10 @@
 
 > A QA/PMO portfolio showing how quality work can be redesigned with AI-assisted tools.
 
+<p align="center">
+  <img src="assets/profile.png" alt="Useful AI QA combines technical skill, analytical thinking, curiosity, communication, AI QA expertise, productivity, and professional attitude." width="900">
+</p>
+
 ## Portfolio Disclaimer
 
 All data, identifiers, thresholds, scenarios, screens, and logs in these repositories are based on public demo sites or self-generated virtual data. They do not include production system information, operational data, internal documents, or private specifications from any current or former company or customer.
