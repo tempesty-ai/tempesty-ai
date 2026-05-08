@@ -31,6 +31,7 @@
 | 2 | [`UI_Test`](https://github.com/tempesty-ai/UI_Test) | 시각적 QA 실행 파이프라인 | Playwright MCP, Claude Code Hook |
 | 3 | [`botserver`](https://github.com/tempesty-ai/botserver) | 협업 도구용 QA 지원 챗봇 | Flask, OpenAI Assistant API, Mattermost |
 | 4 | [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel) | AIOps 모니터링과 AI 출력 품질 평가 | LangChain, Ollama, DeepEval |
+| 5 | [`qa-release-gate`](https://github.com/tempesty-ai/qa-release-gate) | 릴리즈 리스크 판단과 QA 의사결정 | Python, Streamlit, pytest |
 
 ## 저장소 연결 흐름
 
@@ -43,6 +44,8 @@ botserver
   -> QA 지식을 채팅 인터페이스로 노출
 aiops-sentinel
   -> AI가 생성한 분석을 신뢰할 수 있는지 평가
+qa-release-gate
+  -> 릴리즈를 진행해도 되는지 리스크 기반으로 판단
 ```
 
 공통 QA 질문은 이것입니다. 도구가 실제로 회귀 리스크를 줄이는가, 그리고 그것을 어떻게 측정할 수 있는가?
@@ -55,6 +58,7 @@ aiops-sentinel
 | AI 보조 시각적 QA | `UI_Test` |
 | 협업 도구와 챗봇 연동 | `botserver` |
 | LLM 출력 품질 평가 | `aiops-sentinel` |
+| 릴리즈 판단과 QA 리드 관점 | `qa-release-gate` |
 
 ## 현재 로드맵
 
