@@ -1,64 +1,64 @@
-# QA Engineer / PMO Portfolio
+# QA Engineer / PMO 포트폴리오
 
-> A QA/PMO portfolio showing how quality work can be redesigned with AI-assisted tools.
+> AI 도구를 활용해 QA 업무를 어떻게 다시 설계할 수 있는지 보여주는 QA/PMO 포트폴리오입니다.
 
 <p align="center">
-  <img src="assets/profile.png" alt="Useful AI QA combines technical skill, analytical thinking, curiosity, communication, AI QA expertise, productivity, and professional attitude." width="680">
+  <img src="assets/profile.png" alt="훌륭한 AI QA는 기술 역량, 분석 역량, 호기심, 문서 커뮤니케이션, AI QA 전문 역량, 생산성, 태도의 조합으로 만들어진다는 설명 이미지" width="680">
 </p>
 
-## Portfolio Disclaimer
+## 포트폴리오 안내
 
-All data, identifiers, thresholds, scenarios, screens, and logs in these repositories are based on public demo sites or self-generated virtual data. They do not include production system information, operational data, internal documents, or private specifications from any current or former company or customer.
+이 포트폴리오의 데이터, 식별자, 기준값, 시나리오, 화면, 로그는 모두 공개 데모 사이트 또는 직접 생성한 가상 데이터입니다. 현재 또는 과거 회사/고객사의 운영 데이터, 내부 문서, 비공개 명세, 실제 서비스 정보는 포함하지 않습니다.
 
-## Positioning
+## 포지셔닝
 
-| Area | Summary |
+| 영역 | 요약 |
 | --- | --- |
-| Experience | QA engineer since 2009, currently also working with PMO responsibilities |
-| Strengths | Requirements review, test strategy, regression scope, defect analysis, release gate operation |
-| Interest | Redesigning QA work in the AI era with LLM and agent-oriented tools |
-| Automation view | Automation is a support tool for reducing regression risk and operational load, not the goal itself |
+| 경험 | 2009년부터 QA 엔지니어로 일해왔고, 현재는 PMO 역할도 함께 수행하고 있습니다 |
+| 강점 | 요구사항 검토, 테스트 전략, 회귀 범위 선정, 결함 분석, 릴리즈 게이트 운영 |
+| 관심사 | LLM과 에이전트형 도구를 활용해 AI 시대의 QA 업무를 재설계하는 것 |
+| 자동화 관점 | 자동화는 목적이 아니라 회귀 리스크와 운영 부담을 줄이기 위한 지원 도구입니다 |
 
-## Portfolio Structure
+## 포트폴리오 구성
 
-These repositories answer one shared question:
+이 저장소들은 하나의 공통 질문을 다룹니다.
 
-> When QA adopts LLMs and AI agents as tools, how does day-to-day quality work change?
+> QA가 LLM과 AI 에이전트를 도구로 받아들일 때, 일상적인 품질 업무는 어떻게 달라질 수 있을까?
 
-| # | Repository | QA Area | Technologies |
+| # | 저장소 | QA 영역 | 기술 |
 | --- | --- | --- | --- |
-| 1 | [`ok`](https://github.com/tempesty-ai/ok) | UI regression automation foundation | Selenium, Playwright, pytest |
-| 2 | [`UI_Test`](https://github.com/tempesty-ai/UI_Test) | Visual QA execution pipeline | Playwright MCP, Claude Code Hook |
-| 3 | [`botserver`](https://github.com/tempesty-ai/botserver) | QA support chatbot for collaboration tools | Flask, OpenAI Assistant API, Mattermost |
-| 4 | [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel) | AIOps monitoring and AI output quality evaluation | LangChain, Ollama, DeepEval |
+| 1 | [`ok`](https://github.com/tempesty-ai/ok) | UI 회귀 자동화 기반 | Selenium, Playwright, pytest |
+| 2 | [`UI_Test`](https://github.com/tempesty-ai/UI_Test) | 시각적 QA 실행 파이프라인 | Playwright MCP, Claude Code Hook |
+| 3 | [`botserver`](https://github.com/tempesty-ai/botserver) | 협업 도구용 QA 지원 챗봇 | Flask, OpenAI Assistant API, Mattermost |
+| 4 | [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel) | AIOps 모니터링과 AI 출력 품질 평가 | LangChain, Ollama, DeepEval |
 
-## How The Repositories Connect
+## 저장소 연결 흐름
 
 ```text
 ok
-  -> choose what should be automated
+  -> 무엇을 자동화할지 선택
 UI_Test
-  -> delegate repeatable visual inspection to a controlled pipeline
+  -> 반복 가능한 시각 검사를 통제된 파이프라인에 위임
 botserver
-  -> expose QA knowledge through a chat interface
+  -> QA 지식을 채팅 인터페이스로 노출
 aiops-sentinel
-  -> evaluate whether AI-generated analysis can be trusted
+  -> AI가 생성한 분석을 신뢰할 수 있는지 평가
 ```
 
-The common QA question is: does the tool actually reduce regression risk, and how can that be measured?
+공통 QA 질문은 이것입니다. 도구가 실제로 회귀 리스크를 줄이는가, 그리고 그것을 어떻게 측정할 수 있는가?
 
-## Suggested Entry Points
+## 추천 시작점
 
-| Interest | Start With |
+| 관심 영역 | 먼저 볼 저장소 |
 | --- | --- |
-| Traditional QA automation | `ok` |
-| AI-assisted visual QA | `UI_Test` |
-| Collaboration and chatbot integration | `botserver` |
-| LLM output quality evaluation | `aiops-sentinel` |
+| 전통적인 QA 자동화 | `ok` |
+| AI 보조 시각적 QA | `UI_Test` |
+| 협업 도구와 챗봇 연동 | `botserver` |
+| LLM 출력 품질 평가 | `aiops-sentinel` |
 
-## Current Roadmap
+## 현재 로드맵
 
-- Add before/after measurements to each repository README
-- Add measured DeepEval results to `aiops-sentinel`
-- Align disclaimers and contribution notes across repositories
-- Prepare a slide deck version of the portfolio story
+- 각 저장소 README에 전후 비교 측정값 추가
+- `aiops-sentinel`에 측정된 DeepEval 결과 추가
+- 저장소별 안내 문구와 기여 메모 정렬
+- 포트폴리오 스토리의 발표 자료 버전 준비
