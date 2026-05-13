@@ -27,8 +27,8 @@
 
 | # | 저장소 | QA 영역 | 기술 |
 | --- | --- | --- | --- |
-| 1 | [`ok`](https://github.com/tempesty-ai/ok) | UI 회귀 자동화 기반 | Selenium, Playwright, pytest |
-| 2 | [`UI_Test`](https://github.com/tempesty-ai/UI_Test) | 시각적 QA 실행 파이프라인 | Playwright MCP, Claude Code Hook |
+| 1 | [`ui-harness`](https://github.com/tempesty-ai/ui-harness) | UI 회귀 자동화 기반 | Selenium, Playwright, pytest |
+| 2 | [`ui_test`](https://github.com/tempesty-ai/UI_Test) | 시각적 QA 실행 파이프라인 | Playwright MCP, Claude Code Hook |
 | 3 | [`botserver`](https://github.com/tempesty-ai/botserver) | 협업 도구용 QA 지원 챗봇 | Flask, OpenAI Assistant API, Mattermost |
 | 4 | [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel) | AIOps 모니터링과 AI 출력 품질 평가 | LangChain, Ollama, DeepEval |
 | 5 | [`qa-release-gate`](https://github.com/tempesty-ai/qa-release-gate) | 릴리즈 리스크 판단과 QA 의사결정 | Python, Streamlit, pytest |
@@ -36,9 +36,9 @@
 ## 저장소 연결 흐름
 
 ```text
-ok
+ui-harness
   -> 무엇을 자동화할지 선택
-UI_Test
+ui_test
   -> 반복 가능한 시각 검사를 통제된 파이프라인에 위임
 botserver
   -> QA 지식을 채팅 인터페이스로 노출
@@ -54,8 +54,8 @@ qa-release-gate
 
 | 관심 영역 | 먼저 볼 저장소 |
 | --- | --- |
-| 전통적인 QA 자동화 | `ok` |
-| AI 보조 시각적 QA | `UI_Test` |
+| 전통적인 QA 자동화 | `ui-harness` |
+| AI 보조 시각적 QA | `ui_test` |
 | 협업 도구와 챗봇 연동 | `botserver` |
 | LLM 출력 품질 평가 | `aiops-sentinel` |
 | 릴리즈 판단과 QA 리드 관점 | `qa-release-gate` |
