@@ -66,11 +66,11 @@ UI 회귀 자동화, AI 보조 시각 QA, QA 협업 자동화, AI 출력 품질 
 
 | 프로젝트 | QA 역량 | 핵심 메시지 |
 | --- | --- | --- |
-| [`qa-release-gate`](https://github.com/tempesty-ai/qa-release-gate) | 릴리즈 리스크 판단 | 테스트 결과, 결함, 변경 범위, rollback 준비도를 종합해 GO / CONDITIONAL_GO / NO_GO를 판단합니다 |
-| [`UI_Test`](https://github.com/tempesty-ai/UI_Test) | AI 보조 시각적 QA | AI 에이전트를 그대로 믿지 않고 Playwright 기반 하네스로 통제 가능한 시각 QA 흐름을 구성합니다 |
-| [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel) | AI 출력 품질 평가 | AI가 생성한 장애 분석 결과를 DeepEval 기준으로 다시 평가합니다 |
 | [`ui-harness`](https://github.com/tempesty-ai/ui-harness) | UI 회귀 자동화 | 반복 회귀 리스크가 큰 핵심 플로우를 선별해 자동화합니다 |
+| [`UI_Test`](https://github.com/tempesty-ai/UI_Test) | AI 보조 시각적 QA | AI 에이전트를 그대로 믿지 않고 Playwright 기반 하네스로 통제 가능한 시각 QA 흐름을 구성합니다 |
 | [`botserver`](https://github.com/tempesty-ai/botserver) | QA 협업 자동화 | 반복 질문과 인터럽트 비용을 줄이기 위한 Mattermost × OpenAI Assistant 챗봇입니다 |
+| [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel) | AI 출력 품질 평가 | AI가 생성한 장애 분석 결과를 DeepEval 기준으로 다시 평가합니다 |
+| [`qa-release-gate`](https://github.com/tempesty-ai/qa-release-gate) | 릴리즈 리스크 판단 | 테스트 결과, 결함, 변경 범위, rollback 준비도를 종합해 GO / CONDITIONAL_GO / NO_GO를 판단합니다 |
 
 ---
 
@@ -104,11 +104,11 @@ qa-release-gate
 
 | 프로젝트 | 문제 상황 | 제가 보여주려는 판단 |
 | --- | --- | --- |
-| `qa-release-gate` | 테스트 통과율만으로 배포 여부를 판단하면 중요 결함과 rollback 리스크가 누락될 수 있음 | 릴리즈 판단은 pass/fail이 아니라 남은 리스크와 준비 상태를 종합해야 함 |
-| `UI_Test` | HTTP 200이나 일반 E2E 통과만으로는 레이아웃 깨짐, 요소 겹침, 모바일 화면 문제를 잡기 어려움 | AI 에이전트는 자율 실행보다 통제 가능한 하네스 안에서 활용해야 함 |
-| `aiops-sentinel` | AI가 생성한 장애 분석은 그럴듯하지만 실제 운영 판단에 바로 쓰기에는 위험할 수 있음 | AI 출력도 hallucination, relevance, faithfulness 관점에서 검증해야 함 |
 | `ui-harness` | 반복 회귀를 사람이 매번 확인하면 누락과 피로도가 커짐 | 자동화 대상은 반복 빈도, 실패 영향도, 결과 명확성 기준으로 선별해야 함 |
+| `UI_Test` | HTTP 200이나 일반 E2E 통과만으로는 레이아웃 깨짐, 요소 겹침, 모바일 화면 문제를 잡기 어려움 | AI 에이전트는 자율 실행보다 통제 가능한 하네스 안에서 활용해야 함 |
 | `botserver` | QA가 반복 질문에 계속 응답하면 컨텍스트 스위칭 비용이 커짐 | 협업 도구 안에서 QA 지식을 1차 응답 가능하게 구조화해야 함 |
+| `aiops-sentinel` | AI가 생성한 장애 분석은 그럴듯하지만 실제 운영 판단에 바로 쓰기에는 위험할 수 있음 | AI 출력도 hallucination, relevance, faithfulness 관점에서 검증해야 함 |
+| `qa-release-gate` | 테스트 통과율만으로 배포 여부를 판단하면 중요 결함과 rollback 리스크가 누락될 수 있음 | 릴리즈 판단은 pass/fail이 아니라 남은 리스크와 준비 상태를 종합해야 함 |
 
 ---
 
