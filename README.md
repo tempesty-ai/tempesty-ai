@@ -64,13 +64,13 @@ UI 회귀 자동화, AI 보조 시각 QA, QA 협업 자동화, AI 출력 품질 
 
 ## 대표 프로젝트
 
-| 프로젝트 | QA 역량 | 핵심 메시지 |
-| --- | --- | --- |
-| [`ui-harness`](https://github.com/tempesty-ai/ui-harness) | UI 회귀 자동화 | 반복 회귀 리스크가 큰 핵심 플로우를 선별해 자동화합니다 |
-| [`UI_Test`](https://github.com/tempesty-ai/UI_Test) | AI 보조 시각적 QA | AI 에이전트를 그대로 믿지 않고 Playwright 기반 하네스로 통제 가능한 시각 QA 흐름을 구성합니다 |
-| [`botserver`](https://github.com/tempesty-ai/botserver) | QA 협업 자동화 | 반복 질문과 인터럽트 비용을 줄이기 위해 Mattermost와 OpenAI API / Assistant를 연동한 챗봇입니다 |
-| [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel) | AI 출력 품질 평가 | AI가 생성한 장애 분석 결과를 DeepEval 기준으로 다시 평가합니다 |
-| [`qa-release-gate`](https://github.com/tempesty-ai/qa-release-gate) | 릴리즈 리스크 판단 | 테스트 결과, 결함, 변경 범위, rollback 준비도를 종합해 GO / CONDITIONAL_GO / NO_GO를 판단합니다 |
+| 프로젝트 | QA 역량 | 핵심 메시지 | 핵심 기술 스택 |
+| --- | --- | --- | --- |
+| [`ui-harness`](https://github.com/tempesty-ai/ui-harness) | UI 회귀 자동화 | 반복 회귀 리스크가 큰 핵심 플로우를 선별해 자동화합니다 | `Selenium` `Playwright` `pytest` `Page Object` `GitHub Actions` |
+| [`UI_Test`](https://github.com/tempesty-ai/UI_Test) | AI 보조 시각적 QA | AI 에이전트를 그대로 믿지 않고 Playwright 기반 하네스로 통제 가능한 시각 QA 흐름을 구성합니다 | `Playwright MCP` `Claude Code Hooks` `Python` `Cron` |
+| [`botserver`](https://github.com/tempesty-ai/botserver) | QA 협업 자동화 | 반복 질문과 인터럽트 비용을 줄이기 위해 Mattermost와 OpenAI API / Assistant를 연동한 챗봇입니다 | `Python` `Mattermost API` `OpenAI Assistant API` |
+| [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel) | AI 출력 품질 평가 | AI가 생성한 장애 분석 결과를 DeepEval 기준으로 다시 평가합니다 | `Python` `LLM` `DeepEval` |
+| [`qa-release-gate`](https://github.com/tempesty-ai/qa-release-gate) | 릴리즈 리스크 판단 | 테스트 결과, 결함, 변경 범위, rollback 준비도를 종합해 GO / CONDITIONAL_GO / NO_GO를 판단합니다 | `Python` `규칙 기반 의사결정` |
 
 ---
 
