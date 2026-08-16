@@ -52,15 +52,15 @@
 
 ## 대표 프로젝트
 
-| 프로젝트                                                             | QA 역량               | 핵심 메시지                                                                                                   | 핵심 기술 스택                                               |
-| -------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel)   | AI 출력 품질 평가     | AI가 생성한 장애 분석 결과를 DeepEval 기준으로 환각·정합성까지 다시 평가합니다                               | `Python` `DeepEval` `LangChain` `Ollama`             |
-| [`qa-release-gate`](https://github.com/tempesty-ai/qa-release-gate) | 릴리즈 리스크 판단    | 테스트 결과·결함·변경 범위·rollback 준비도를 종합해 GO / CONDITIONAL_GO / NO_GO를 판단하고 CI에 연동합니다 | `Python` `Streamlit` `GitHub Actions` `pytest`       |
-| [`UI_Test`](https://github.com/tempesty-ai/UI_Test)                 | AI 에이전트 검증      | AI 에이전트를 그대로 믿지 않고 하네스로 통제하며, 그 수행 결과를 사람이 재검증해 신뢰도를 지표화합니다        | `Playwright MCP` `Claude Code Hooks` `Python` `Cron` |
-| [`qa-automation-foundation`](https://github.com/tempesty-ai/ok)     | UI 회귀 자동화        | 반복 회귀 리스크가 큰 핵심 플로우를 선별해 자동화합니다                                                       | `Selenium` `Playwright` `pytest` `Page Object`       |
-| [`botserver`](https://github.com/tempesty-ai/botserver)             | QA 협업 자동화 (리딩) | 반복 질문과 인터럽트 비용을 줄이는 QA 지원 챗봇을 기획·설계·구현 단독 주도 후 팀에 운영했습니다             | `Flask` `OpenAI Assistant API` `Mattermost`            |
+| 프로젝트 | QA 역량 | 핵심 메시지 | 핵심 기술 스택 |
+| --- | --- | --- | --- |
+| [`UI_Test`](https://github.com/tempesty-ai/UI_Test) | AI 에이전트 검증 | AI 에이전트를 그대로 믿지 않고 하네스로 통제하며, 그 수행 결과를 사람이 재검증해 신뢰도를 지표화합니다 | `Playwright MCP` `Claude Code Hooks` `Python` `Cron` |
+| [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel) | AI 출력 품질 평가 | AI가 생성한 장애 분석 결과를 DeepEval 기준으로 환각·정합성까지 다시 평가합니다 | `Python` `DeepEval` `LangChain` `Ollama` |
 | [`ttalkkak-bug-reporter`](https://github.com/tempesty-ai/ttalkkak-bug-reporter) | AI 결함 리포팅 자동화 | 로컬 AI가 메모·콘솔 에러·스크린샷을 종합해 리포트를 정형화하고, 버그 발견부터 등록까지를 30초로 줄입니다 | `Ollama` `Chrome MV3` `ClickUp API` `Vanilla JS` |
----
+| [`qa-release-gate`](https://github.com/tempesty-ai/qa-release-gate) | 릴리즈 리스크 판단 | 테스트 결과·결함·변경 범위·rollback 준비도를 종합해 GO / CONDITIONAL_GO / NO_GO를 판단하고 CI에 연동합니다 | `Python` `Streamlit` `GitHub Actions` `pytest` |
+| [`apm-qa-automation`](https://github.com/tempesty-ai/apm-qa-automation) | 비기능(성능) 자동화 | 기능 검증과 부하 테스트를 하나의 파이프라인에 묶어 CI에서 자동 실행합니다 | `pytest` `Locust` `Docker Compose` `GitHub Actions` |
+| [`ui-harness`](https://github.com/tempesty-ai/ui-harness) | UI 회귀 자동화 | 반복 회귀 리스크가 큰 핵심 플로우를 선별해 자동화합니다 | `Selenium` `Playwright` `pytest` `Page Object` |
+| [`botserver`](https://github.com/tempesty-ai/botserver) | QA 협업 자동화 (리딩) | 반복 질문과 인터럽트 비용을 줄이는 QA 지원 챗봇을 기획·설계·구현 단독 주도 후 팀에 운영했습니다 | `Flask` `OpenAI Assistant API` `Mattermost` |
 
 ## 포트폴리오 스토리라인
 
