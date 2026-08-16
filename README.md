@@ -65,11 +65,17 @@
 ## 포트폴리오 스토리라인
 
 ```text
-qa-automation-foundation
+ui-harness
   -> 반복 회귀를 줄이기 위해 무엇을 자동화할지 리스크 기준으로 선별
+
+apm-qa-automation
+  -> 기능 검증에 더해 부하 조건에서의 성능 회귀까지 CI에서 자동 확인
 
 UI_Test
   -> 일반 자동화로 놓치기 쉬운 시각적 회귀를 AI 에이전트와 하네스로 점검하고 결과를 재검증
+
+ttalkkak-bug-reporter
+  -> 발견한 결함을 사람이 다시 정리하지 않도록, 로컬 AI가 증거와 함께 리포트로 정형화
 
 botserver
   -> QA가 반복적으로 받는 장애/성능/배포 질문을 챗봇으로 자산화해 1차 대응
@@ -97,6 +103,8 @@ qa-release-gate
 | `UI_Test`                  | HTTP 200이나 일반 E2E 통과만으로는 레이아웃 깨짐, 요소 겹침, 모바일 화면 문제를 잡기 어려움 | AI 에이전트는 자율 실행보다 통제 가능한 하네스 안에서 활용하고, 그 판정을 재검증해야 함 |
 | `qa-automation-foundation` | 반복 회귀를 사람이 매번 확인하면 누락과 피로도가 커짐                                       | 자동화 대상은 반복 빈도, 실패 영향도, 결과 명확성 기준으로 선별해야 함                  |
 | `botserver`                | QA가 반복 질문에 계속 응답하면 컨텍스트 스위칭 비용이 커짐                                  | 협업 도구 안에서 QA 지식을 1차 응답 가능하게 구조화해야 함                              |
+| `apm-qa-automation` | 기능 테스트만 통과해도 부하 조건에서 응답 지연이나 실패가 발생할 수 있음 | 비기능 품질은 릴리즈 직전 수동 확인이 아니라 CI에서 상시 측정되어야 함 |
+| `ttalkkak-bug-reporter` | 결함 리포트 작성 부담이 크면 재현 절차와 증거가 누락된 채 등록됨 | 증거 수집을 자동화해야 리포트 품질이 사람의 컨디션에 좌우되지 않음 |
 
 ---
 
@@ -123,8 +131,9 @@ qa-release-gate
 ## 기술 스택
 
 **언어 · 자동화** Python · pytest · Selenium · Playwright · JavaScript · Postman
+**비기능 · 부하** Locust · Docker Compose
 **AI · LLM 품질 평가** DeepEval · LangChain · Ollama · Playwright MCP · Claude Code Hooks · OpenAI Assistant API
-**플랫폼 · 운영** GitHub Actions (CI/CD) · Flask · Streamlit · Mattermost
+**플랫폼 · 운영** GitHub Actions (CI/CD) · Flask · Streamlit · Mattermost · Chrome Extension (MV3)
 
 ---
 
