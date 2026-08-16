@@ -146,6 +146,6 @@ qa-release-gate
 ---
 
 ## 연락처
-
+- 👤 김영신 (Kim Young Shin)
 - 📧 tempesty7207@gmail.com
 - 💻 github.com/tempesty-ai
