@@ -54,7 +54,7 @@
 
 | 프로젝트 | QA 역량 | 핵심 메시지 | 핵심 기술 스택 |
 | --- | --- | --- | --- |
-| [`botserver`](https://github.com/tempesty-ai/botserver) | QA 협업 자동화 (리딩) | 반복 질문과 인터럽트 비용을 줄이는 QA 지원 챗봇을 기획·설계·구현 단독 주도 후 팀에 운영했습니다 | `Flask` `OpenAI Assistant API` `Mattermost` |
+| [`botserver`](https://github.com/tempesty-ai/botserver) | 사내 챗봇 구축·운영 | 반복 질문과 인터럽트 비용을 줄이는 QA 지원 챗봇을 기획·설계·구현 단독 주도 후 팀에 운영했습니다. 커넥터가 질문에 맞는 사내 문서를 검색해 첨부하는 RAG 구조로, 답변이 문서 근거를 갖도록 했습니다 | `Flask` `OpenAI Assistant API` `RAG (file_search / vector store)` `Mattermost` |
 | [`ttalkkak-bug-reporter`](https://github.com/tempesty-ai/ttalkkak-bug-reporter) 🏆 | AI 결함 리포팅 자동화 (사내 공모전 수상) | 로컬 AI가 메모·콘솔 에러·스크린샷을 종합해 리포트를 정형화하고, 버그 발견부터 등록까지를 30초로 줄입니다 | `Ollama` `Chrome MV3` `ClickUp API` `Vanilla JS` |
 | [`UI_Test`](https://github.com/tempesty-ai/UI_Test) | AI 에이전트 검증 | AI 에이전트를 그대로 믿지 않고 하네스로 통제하며, 그 수행 결과를 사람이 재검증해 신뢰도를 지표화합니다 | `Playwright MCP` `Claude Code Hooks` `Python` `Cron` |
 | [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel) | AI 출력 품질 평가 | AI가 생성한 장애 분석 결과를 DeepEval 기준으로 환각·정합성까지 다시 평가합니다 | `Python` `DeepEval` `LangChain` `Ollama` |
@@ -98,7 +98,7 @@ qa-release-gate
 
 | 프로젝트                     | 문제 상황                                                                                   | 제가 보여주려는 판단                                                                    |
 | ---------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `botserver`                | QA가 반복 질문에 계속 응답하면 컨텍스트 스위칭 비용이 커짐                                  | 협업 도구 안에서 QA 지식을 1차 응답 가능하게 구조화해야 함                              |
+| `botserver`                | QA가 반복 질문에 계속 응답하면 컨텍스트 스위칭 비용이 커지고, 근거 없는 답변은 오히려 재확인 비용을 만듦 | 협업 도구 안에서 QA 지식을 1차 응답 가능하게 구조화하되, RAG로 사내 문서를 근거로 붙여야 신뢰할 수 있음 |
 | `ttalkkak-bug-reporter` | 결함 리포트 작성 부담이 크면 재현 절차와 증거가 누락된 채 등록됨 | 증거 수집을 자동화해야 리포트 품질이 사람의 컨디션에 좌우되지 않음 |
 | `UI_Test`                  | HTTP 200이나 일반 E2E 통과만으로는 레이아웃 깨짐, 요소 겹침, 모바일 화면 문제를 잡기 어려움 | AI 에이전트는 자율 실행보다 통제 가능한 하네스 안에서 활용하고, 그 판정을 재검증해야 함 |
 | `aiops-sentinel`           | AI가 생성한 장애 분석은 그럴듯하지만 실제 운영 판단에 바로 쓰기에는 위험할 수 있음          | AI 출력도 hallucination, relevance, faithfulness 관점에서 검증해야 함                   |
