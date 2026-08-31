@@ -154,5 +154,5 @@ ui-harness
 
 ## 연락처
 - 👤 김영신 (Kim Young Shin)
-- 📧 tempesty7207@gmail.com
+- 📧 seoaminji@gmail.com
 - 💻 github.com/tempesty-ai
