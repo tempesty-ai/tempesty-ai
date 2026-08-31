@@ -56,6 +56,7 @@
 | --- | --- | --- | --- |
 | [`botserver`](https://github.com/tempesty-ai/botserver) | 사내 챗봇 구축·운영 | 반복 질문과 인터럽트 비용을 줄이는 QA 지원 챗봇을 기획·설계·구현 단독 주도 후 팀에 운영했습니다. 커넥터가 질문에 맞는 사내 문서를 검색해 첨부하는 RAG 구조로, 답변이 문서 근거를 갖도록 했습니다 | `Flask` `OpenAI Assistant API` `RAG (file_search / vector store)` `Mattermost` |
 | [`ttalkkak-bug-reporter`](https://github.com/tempesty-ai/ttalkkak-bug-reporter) 🏆 | AI 결함 리포팅 자동화 (사내 공모전 수상) | 로컬 AI가 메모·콘솔 에러·스크린샷을 종합해 리포트를 정형화하고, 버그 발견부터 등록까지를 30초로 줄입니다 | `Ollama` `Chrome MV3` `ClickUp API` `Vanilla JS` |
+| [`qa-tc-studio`](https://github.com/tempesty-ai/qa-tc-studio) | 테스트 설계·관리 | 소스·명세·실제 화면을 대조해 만든 테스트케이스를 단일 정본으로 관리하고, 클릭해서 결과를 기록하는 리포트와 공유 대시보드로 렌더링합니다 | `Python (기본 모듈만)` `JSON Schema` `HTML/JS` |
 | [`UI_Test`](https://github.com/tempesty-ai/UI_Test) | AI 에이전트 검증 | AI 에이전트를 그대로 믿지 않고 하네스로 통제하며, 그 수행 결과를 사람이 재검증해 신뢰도를 지표화합니다 | `Playwright MCP` `Claude Code Hooks` `Python` `Cron` |
 | [`aiops-sentinel`](https://github.com/tempesty-ai/aiops-sentinel) | AI 출력 품질 평가 | AI가 생성한 장애 분석 결과를 DeepEval 기준으로 환각·정합성까지 다시 평가합니다 | `Python` `DeepEval` `LangChain` `Ollama` |
 | [`qa-release-gate`](https://github.com/tempesty-ai/qa-release-gate) | 릴리즈 리스크 판단 | 테스트 결과·결함·변경 범위·rollback 준비도를 종합해 GO / CONDITIONAL_GO / NO_GO를 판단하고 CI에 연동합니다 | `Python` `Streamlit` `GitHub Actions` `pytest` |
@@ -72,6 +73,9 @@ botserver
 
 ttalkkak-bug-reporter
   -> 발견한 결함을 사람이 다시 정리하지 않도록, 로컬 AI가 증거와 함께 리포트로 정형화
+
+qa-tc-studio
+  -> 무엇을 검증할지 단일 정본으로 관리하고, 진척을 케이스 수가 아니라 검증 깊이로 확인
 
 UI_Test
   -> 일반 자동화로 놓치기 쉬운 시각적 회귀를 AI 에이전트와 하네스로 점검하고 결과를 재검증
@@ -102,6 +106,7 @@ ui-harness
 | ---------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | `botserver`                | QA가 반복 질문에 계속 응답하면 컨텍스트 스위칭 비용이 커지고, 근거 없는 답변은 오히려 재확인 비용을 만듦 | 협업 도구 안에서 QA 지식을 1차 응답 가능하게 구조화하되, RAG로 사내 문서를 근거로 붙여야 신뢰할 수 있음 |
 | `ttalkkak-bug-reporter` | 결함 리포트 작성 부담이 크면 재현 절차와 증거가 누락된 채 등록됨 | 증거 수집을 자동화해야 리포트 품질이 사람의 컨디션에 좌우되지 않음 |
+| `qa-tc-studio` | 테스트케이스가 엑셀·위키에 흩어지면 무엇이 검증됐는지 아무도 답하지 못함 | TC 는 단일 정본으로 관리하고, 진척은 실행 건수가 아니라 검증 깊이로 판단해야 함 |
 | `UI_Test`                  | HTTP 200이나 일반 E2E 통과만으로는 레이아웃 깨짐, 요소 겹침, 모바일 화면 문제를 잡기 어려움 | AI 에이전트는 자율 실행보다 통제 가능한 하네스 안에서 활용하고, 그 판정을 재검증해야 함 |
 | `aiops-sentinel`           | AI가 생성한 장애 분석은 그럴듯하지만 실제 운영 판단에 바로 쓰기에는 위험할 수 있음          | AI 출력도 hallucination, relevance, faithfulness 관점에서 검증해야 함                   |
 | `qa-release-gate`          | 테스트 통과율만으로 배포 여부를 판단하면 중요 결함과 rollback 리스크가 누락될 수 있음       | 릴리즈 판단은 pass/fail이 아니라 남은 리스크와 준비 상태를 종합해야 함                  |
